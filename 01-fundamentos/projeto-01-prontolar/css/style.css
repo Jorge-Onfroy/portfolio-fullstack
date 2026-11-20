@@ -1,0 +1,284 @@
+
+/* 1. Design tokens */
+:root {
+  --color-primary: #17324D;
+  --color-accent: #168C83;
+  --color-background: #F7F8F5;
+  --color-surface: #FFFFFF;
+  --color-text: #263238;
+  --color-muted: #59666D;
+  --color-border: #DCE3E2;
+
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+
+  --radius-card: 0.75rem;
+  --content-width: 1120px;
+}
+
+/* 2. Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+
+}
+
+.section {
+  padding-block: var(--space-6);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+  line-height: 1.2;
+  text-align: center;
+}
+
+h1 {
+  max-width: 15ch;
+  margin-inline: auto;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* 3. Header */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 76px;
+}
+
+.brand {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--color-accent);
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .header-content {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-2);
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: var(--space-2);
+  }
+}
+.nav-list a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-block: var(--space-2);
+  }
+}
+/* 4. Hero */
+.hero {
+  padding-block: clamp(4rem, 10vw, 7rem);
+  background-image: url("../images/img.jpg");
+  color: #EAF3F1 ;
+}
+
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero > .container > p:not(.eyebrow) {
+  max-width: 60ch;
+  margin-inline: auto;
+  color: var(--color-muted);
+}
+
+/* 5. Actions */
+.button {
+  display: inline-block;
+  margin-top: var(--space-2);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #116F69;
+}
+
+/* 6. Services */
+.section-description {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.service-card p,
+.contact-note {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* 7. About and contact */
+.about {
+  background: var(--color-surface);
+}
+
+.about p,
+.contact p {
+  max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.contact {
+  background: #EAF3F1;
+}
+
+/* 8. Footer */
+.site-footer {
+  padding-block: var(--space-3);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 9. Responsive */
+@media (min-width: 700px) {
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-2);
+  }
+
+  .nav-list {
+    gap: var(--space-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

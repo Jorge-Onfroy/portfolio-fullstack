@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .button {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            gap: 5px;
+            transition: all 0.5s ease;
+        }
+
+        .buttons {
+            gap: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+
+        }
+
+        .container h1 {
+            text-align: left;
+
+        }
+
+        .container p {
+            text-align: left;
+        }
+
+        .x {
+            text-align: center;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            flex: 1;
+            min-width: 0;
+
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .site-footer {
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background-color: black;
+        }
+
+        .emphasis {
+            border: 1px solid blue;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá! Me chamo Jorge Onfroy!</h1>
+    <p>Desenvolvedor Web Full Stack em formação.</p>
+    <p>Estou construindo aplicações web, explorando tecnologias modernas e transformando ideias em soluções funcionais.
+    </p>
+    <a class="button" href="#footer">Contate-me</a>
+    <section class="main">
+        <div class="container">
+            <div class="card">
+                <img class="img" src="assets/img/img.jpg" alt="imagem aleatoria">
+                <div class="card-content">
+                    <h1>Primeiro Projeto</h1>
+                    <p>Descrição do primeiro projeto</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="assets/img/img.jpg" alt="imagem aleatoria">
+                <div class="card-content">
+                    <h1>Segundo Projeto</h1>
+                    <p>Descrição do segundo projeto</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img" src="assets/img/img.jpg" alt="imagem aleatoria">
+                <div class="card-content">
+                    <h1>Terceiro Projeto</h1>
+                    <p>Descrição do terceiro projeto</p>
+                    <p>tecnologias ou logos delas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h1>Sobre mim</h1>
+        <p>Sou desenvolvedor em formação, com base técnica em informática e desenvolvimento de sistemas. Atualmente,
+            estou aprofundando meus conhecimentos em desenvolvimento web, construindo projetos próprios e buscando
+            evoluir tanto na parte do frontend quanto no backend.
+
+            Tenho interesse em desenvolver aplicações que resolvam problemas reais, com foco em funcionalidade,
+            organização, boas práticas e aprendizado contínuo.
+
+            Acredito que a melhor forma de evoluir é construir, testar, errar e melhorar. Por isso, este portfólio reúne
+            projetos que representam minha evolução e minha capacidade de transformar ideias em aplicações.</p>
+    </section>
+
+    <section class="tecnologies-and-skills">
+        <div class="container-tecnologies-skills">
+            <div>
+                <h3>Frontend</h3>
+                <p>Html</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Outras tecnologias...</p>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+            </div>
+            <div>
+                <h3>Palavra ou logo</h3>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+                <p><span class="emphasis">Palavra ou logo</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="x">
+            <h2>Vamos conversar?</h2><br>
+            <p>Está buscando um desenvolvedor para um projeto, quer trocar ideias ou conhecer melhor meu trabalho? Entre
+                em contato.</p>
+
+            <div class="buttons"><a class="button" href="">
+                    Whatsapp
+                </a>
+                <a class="button" href="">
+                    Github</a>
+                <a class=" button" href="">
+                    Linkedin
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" id="footer">
+        <p>Jorge Onfroy · Desenvolvedor Web © 2026 — Desenvolvido por Jorge Onfroy.</p>
+    </footer>
+</body>
+
+</html>
